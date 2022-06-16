@@ -31,7 +31,7 @@ DEBUG = False
 STATIC_URL = "CSUShop/static/"
 STATIC_ROOT = os.path.join(BASE_DIR,"static")
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://csushop.herokuapp.com/']
 
 
 # Application definition
