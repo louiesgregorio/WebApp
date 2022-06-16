@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-t&!xkshb^-aem790^$crw78g@_#5i-%zao@6s5gfpk7nd=fibr
 DEBUG = False
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 django_heroku.settings(locals())
 
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
