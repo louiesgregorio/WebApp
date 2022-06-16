@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSU Shopping Site</title>
+        <meta name="description" content="This is the description">
+        {% load static %}
+        <link rel="stylesheet" href="{% static "styles.css" %}">
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href= "{% url 'admin:index' %}">ADMIN</a></li>
+                    <li><a href= "{% url 'home' %}">HOME</a></li>
+                    <li><a href= "{% url 'store' %}">STORE</a></li>
+                    <li><a href= "{% url 'about' %}" >ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">The CSU Shop</h1>
+            <div class="container">
+                <center><button type="button" class="btn btn-header"><a href="{% url 'store' %}">Get our Latest Product</a></button></center>
+            </div>
+        </header>
+        <section class="content-section container">
+            <h2 class="section-header">Coming Soon</h2>
+            <div>
+                <div class="dept">
+                    <span class="pre-order deptname">CEGS</span>
+                    <span class="pre-order description">Customized CEGS Lanyard with free ID Holder</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+                <div class="dept">
+                    <span class="pre-order deptname">CCIS</span>
+                    <span class="pre-order description">Customized CCIS Lanyard with free ID Holder and Mask</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+                <div class="dept">
+                    <span class="pre-order deptname">CHASS</span>
+                    <span class="pre-order description">Customized CHASS Lanyard with free ID Holder</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+                <div class="dept">
+                    <span class="pre-order deptname">CAA</span>
+                    <span class="pre-order description">Customized CAA Lanyard with free ID Holder</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+                <div class="dept">
+                    <span class="pre-order deptname">CED</span>
+                    <span class="pre-order description">Customized CED Lanyard with free ID Holder</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+                  <div class="dept">
+                    <span class="pre-order deptname">COFES</span>
+                    <span class="pre-order description">Customized COFES Lanyard with free ID Holder</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+                  <div class="dept">
+                    <span class="pre-order deptname">CMNS</span>
+                    <span class="pre-order description">Customized CMNS Lanyard with free ID Holder</span>
+                    <button type="button" class="pre-order dept-btn btn btn-primary"><a href="{% url 'preorder' %}">Pre-Order Now!</a></button>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">Caraga State University</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.gmail.com" target="_blank">
+                            <img src="{% static "Images/email.png" %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.carsu.edu.ph" target="_blank">
+                            <img src="{% static "Images/website.png" %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="{% static "Images/Facebook Logo.png" %}">
+                        </a>
+                    </li>
+                </ul
+            </div>
+        </footer>
+    </body>
+</html>

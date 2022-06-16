@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSU | About Page</title>
+        <meta name="description" content="This is the description">
+        {% load static %}
+        <link rel="stylesheet" href="{% static "styles.css" %}">
+    </head>
+    <body>
+        <header class="about-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href= "{% url 'admin:index' %}">ADMIN</a></li>
+                    <li><a href= "{% url 'home' %}">HOME</a></li>
+                    <li><a href= "{% url 'store' %}">STORE</a></li>
+                    <li><a href= "{% url 'about' %}" >ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">Caraga State University</h1>
+        </header>
+
+        <section class="content-section container">
+            <h2 class="section-header">ABOUT</h2>
+            {% load static %}
+            <img class="about-band-image" src="{% static "Images/logo.jpg" %}">
+            <p>CSU was first conceived in 1918 as the Agusan Agriculture High School (AAHS)thru the passage of an Omnibus Bill filed by the First Congresswoman of the Philippines, Honorable Elisa Rosales Ochoa. On February 14, 1920, Proclamation Number 4 was passed by the American Governor to the Philippines Francis Burton Harrison, declaring the reservation of a 232-hectare virgin forest land in Barrio Ampayon, in the Municipality of Butuan, province of Agusan del Norte as the grounds of the young school. However, it was only at the close of World War II in 1946 that the Agusan Agricultural High School (AAHS) was established in the reserved area.</p>
+            <p>The first framework of the school building was laid down in 1937. However the development of the school was deferred as the government deviated to giving priority to serve the Manobo cultural minority by creating the Bunawan Agricultural High School in Agusan del Sur. The funding for the establishment of the school came from the Rehabilitation Act of 1946, the FAO-PHILCUSA, and the Pres. Carlos P. Garcia contingency fund.</p>
+            <p>After 17 years, in June 22, 1963, Republic Act 3604 was passed converting the school into the Northern Mindanao Agricultural College (NORMINAC). NORMINAC was among the 13 pilot experimental agricultural high school chosen by the Department of Education and Culture (DEC) for World Bank Assistance through the Central Bank Development of Education Agricultural Loan Fund (CB-DEC-ALF) which was the umbrella of the Educational Project Implementing Task Force (EDPITAF) in 1974-1975. Moreover, NORMINAC became the training center for the National Manpower and Youth Council (NMYC).</p>
+            <p>In collaboration with the International Rice Research Institute, the school was instrumental in the discovery of the zinc deficiency problem of the Agusan Land. The technological breakthrough solved the puzzle of poor rice harvests in many rice fields in Agusan and the surrounding areas.</p>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">Contact Us</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.gmail.com" target="_blank">
+                            <img src="{% static "Images/email.png" %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.carsu.edu.ph" target="_blank">
+                            <img src="{% static "Images/website.png" %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="{% static "Images/Facebook Logo.png" %}">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

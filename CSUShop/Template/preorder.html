@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pre Order Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+
+</head>
+<body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href= "{% url 'admin:index' %}">ADMIN</a></li>
+                    <li><a href= "{% url 'home' %}">HOME</a></li>
+                    <li><a href= "{% url 'store' %}">STORE</a></li>
+                    <li><a href= "{% url 'about' %}" >ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">The CSU Shop</h1>
+        <center>
+            <h2 style="color: wheat" >Please Fill-up the form to Pre-order</h2>
+        </center>>
+
+<div style="width: 460px" class="preorderpage">
+  <div style="width:450px" class="formdata">
+
+   <form class="table" action="" method="POST">
+    {% csrf_token %}
+      <label for="name">Full Name</label>
+      <input type="text" name="name" value=""  placeholder="Enter Full Name" required>
+
+      <label for="idnum">ID Number</label>
+      <input type="text" name="idnum" value=""  placeholder="ID Number" required>
+
+      <label for="department">Department</label>
+      <input type="text" name="department" value=""  placeholder="Enter Department" required>
+
+      <label for="progyear">Program-Year</label>
+      <input type="text" name="progyear" value=""  placeholder="Student Course & yr." required>
+
+      <label for="contact">Contact No.</label>
+      <input type="text" name="contact" value="" placeholder="Cellphone No." required>
+
+      <div style="width:150%">
+      <input type="submit"  value="Submit" class="button">
+      </div>
+  </form>
+      </div></div>
+<br>
+  <br><br>
+
+  <br> <br>
+  <br> <br>
+<br>
+<div style="width: 500px" class="listoforder">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "preorder.css" %}">
+  <div class="display_table">
+              <table style="width: 465px" class="list" id="employeeList">
+                <h2 style="text-align: center; color:white">List of Accepted Pre-orders</h2>
+                    <thead>
+                         <tr>
+                      <th>Full Name</th>
+                      <th>ID Number</th>
+                      <th>Department</th>
+                      <th>Program-Yr</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                    {% for pre in pres %}
+                     <tr>
+                      <th>{{pre.name}}</th>
+                      <th>{{pre.idnum}}</th>
+                      <th>{{pre.department}}</th>
+                      <th>{{pre.progyear}}</th>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+
+            </table>
+  </div>
+</div>
+</body>
+</html>

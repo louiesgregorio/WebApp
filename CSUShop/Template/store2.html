@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>CSU Store</title>
+        <meta name="description" content="This is the description">
+        {% load static %}
+        <link rel="stylesheet" href="{% static "styles.css" %}">
+        <script src="{% static "store.js" async %}"></script>
+    </head>
+        <header class="shoppage-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href= "{% url 'admin:index' %}">ADMIN</a></li>
+                    <li><a href= "{% url 'home' %}">HOME</a></li>
+                    <li><a href= "{% url 'store' %}">STORE</a></li>
+                    <li><a href= "{% url 'about' %}" >ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">CSU Merchandise</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Jacket</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">University Jacket</span>
+                    {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/University Jacket.jpg" %}" >
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">899 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Bomber Jacket</span>
+                    {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/Bomber Jacket.jpg" %}" >
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">999 Php</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    {% load static %}
+                    <span class="shop-item-title">Hoodie Jacket</span>
+                    <img class="shop-item-image" src="{% static "Images/Hoodie Jacket.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">899 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    {% load static %}
+                    <span class="shop-item-title">Sweatshirt</span>
+                    <img class="shop-item-image" src="{% static "Images/Sweatshirt.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">549 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">University T-Shirts</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">White T-Shirt</span>
+                    {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/White.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">180 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                 <div class="shop-item">
+                    <span class="shop-item-title">Maroon T-Shirt</span>
+                     {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/Maroon.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">200 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Blue T-shirt</span>
+                    {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/Blue.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">200 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Others</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Tumbler</span>
+                    {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/Tumbler.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">349 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                 <div class="shop-item">
+                    <span class="shop-item-title">Tote Bag</span>
+                     {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/Tote Bag.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">120 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Jogger Pants</span>
+                    {% load static %}
+                    <img class="shop-item-image" src="{% static "Images/Jogger Pants.jpg" %}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">599 Php</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">Caraga State University</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.gmail.com" target="_blank">
+                            <img src="{% static "Images/email.png" %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.carsu.edu.ph" target="_blank">
+                            <img src="{% static "Images/website.png" %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="{% static "Images/Facebook Logo.png" %}">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+</html>
