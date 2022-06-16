@@ -29,8 +29,6 @@ SECRET_KEY = 'django-insecure-t&!xkshb^-aem790^$crw78g@_#5i-%zao@6s5gfpk7nd=fibr
 DEBUG = False
 
 STATIC_URL = "static/"
-django_heroku.settings(locals())
-
 
 ALLOWED_HOSTS = ['https://csushop.herokuapp.com/']
 
